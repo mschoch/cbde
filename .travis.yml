@@ -1,8 +1,6 @@
 sudo: required
 
-cache:
-  directories:
-  - $HOME/.cbdepscache
+# no speedup from caching $HOME/.cbdepscache
 
 language: c
 
