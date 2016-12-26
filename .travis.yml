@@ -10,6 +10,7 @@ language: c
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./setup_linux.sh          ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX="g++-4.8" CC="gcc-4.8"          ; fi
 
 before_script:
   # set up custom bin dir
