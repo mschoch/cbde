@@ -28,3 +28,8 @@ before_script:
 
 script:
   - make
+
+after_success:
+  - cd install
+  - tar zcvf ../cbde-${TRAVIS_OS_NAME}.tar.gz .
+  - cd ..
