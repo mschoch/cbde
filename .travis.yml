@@ -31,4 +31,4 @@ deploy:
   file: cbde-${TRAVIS_OS_NAME}.tar.gz
   skip_cleanup: true
   on:
-    tags: true
+    repo: mschoch/cbde
