@@ -23,11 +23,12 @@ after_success:
 - cd install
 - tar zcvf ../cbde-${TRAVIS_OS_NAME}.tar.gz .
 - cd ..
-- ./set_tags.sh
+#- ./set_tags.sh
 deploy:
   provider: releases
   api_key:
     secure: M3S0LR5ZKQGAQ8r6AGlXWqgLvy+li3sbiCf6ppJtngqbNZN3gOKuAHWy/ZdKTRYEOyuDMJyRDrawxI/Q1dwE+ukD1rEwTfHCiO2CHytKqFxQjyOLeKefNKHcncntv5MYGzr2DSr2fuoaalugKQONb4B0s2nCokV0QH4Pdv5AG5jegnKWnCH20Sf/tvcREhdAusUxHStslZU5UORfz4lPW9EH3nMHtcnygSWyegaPGWkAIt2FuWKkFcw5rzlT0/TqbZ7b+7yK5cEyjj7ATRrYFZ+vcq5sx6Fm2lrFW7C8H1/9R6kIWbkY1sCJpPQqFjyjjdLJcxZqL51MPIg3PRuP05dYbkHnTtia3ok+ePy5J57HFIkPMy4s2VeOrbNWAK+k6TLWJbckkV06rqlhBVNaqODAL/3dKrsMuqVVISvFcSOQaX06t9dNQXovHjT/AZHb2bFYnxOr6y5/FgL3W8/dnq5N5lgyopSPmX388NAU0E2d+TVM27TMgjY7W/2gE/PxrGY/8Yv4xGm6L6vmkAQEd/VyshXN05IQnyGZZ5RD75QTzK1mdMRTJDnTE5CQlA6VLeUts9SWHTVF6uqtBtVHzvPJYICg8cMv+fGOOcjmBONxp6SmGgu0bnbcqqxASpo8EKsyzCBIlsQAszlXfP1Az+i79GNmHkZ9YWmv5cFtW4o=
   file: cbde-${TRAVIS_OS_NAME}.tar.gz
+  skip_cleanup: true
   on:
-    repo: mschoch/cbde
+    tags: true
