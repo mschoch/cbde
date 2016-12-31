@@ -14,7 +14,7 @@ if [ "$TRAVIS_BRANCH" = "$BRANCH" ]; then
       echo -e "Starting to tag commit.\n"
 
       # Add tag and push to master.
-      git tag -a ${TAGNAME} -m "Travis build $TAGNAME pushed a tag."
+      git tag -a v${TAGNAME} -m "Travis build v$TAGNAME pushed a tag."
       echo -e "tagged\n"
       #git push origin --tags
       #echo -e "pushed\n"
