@@ -23,7 +23,7 @@ after_success:
 - cd install
 - tar zcvf ../cbde-${TRAVIS_OS_NAME}.tar.gz .
 - cd ..
-#- ./set_tags.sh
+- ./set_tags.sh
 deploy:
   provider: releases
   api_key:
